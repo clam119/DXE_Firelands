@@ -3683,7 +3683,7 @@ do
             },
             {
                 phase = 3,
-                alerts = {"meteorcd","meteorwarn","meteorselfwarn","fixateselfwarn"},
+                alerts = {"meteorcd","meteorwarn","meteorselfwarn","fixateselfwarn","blazingheatcd","blazingheatwarn",},
             },
             {
                 phase = 4,
