@@ -4506,6 +4506,14 @@ do
                         "alert","splitcast",
                         "set",{intermissioncount = "INCR|1"},
                         "set",{splittingblowcount= "INCR|1"},
+                        -- Second Intermission Enabling Blazing Heat CD Timer
+                        -- As it's when the initial cast starts, it will just be reoccurring 21s timer
+                        "expect",{"<splittingblowcount>","==","2",}, 
+                        "invoke",{
+                            {
+                                "alert","blazingheatcd",
+                            },
+                        },
 						"set",{
                             phasetext = format(L.alert["Intermission %s"],"<intermissioncount>"),
                             intermissiontext = format(L.alert["Phase %s"],"&sum|<phase>|1&"),
