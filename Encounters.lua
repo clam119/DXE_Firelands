@@ -3675,7 +3675,7 @@ do
             },
             {
                 phase = format("|cffffd700Intermission|r |cffffffffPhase|r"),
-                alerts = {"intermissionsoonwarn","splitcast","hammersidewarn","intermissionduration","sonkilledwarn","heatwarn","heatselfwarn"},
+                alerts = {"intermissionsoonwarn","splitcast","hammersidewarn","intermissionduration","sonkilledwarn","heatwarn","heatselfwarn","blazingheatcd","blazingheatwarn",},
             },
             {
                 phase = 2,
