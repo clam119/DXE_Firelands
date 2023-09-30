@@ -3480,6 +3480,7 @@ do
 				"set",{
 					phase = 1,
                     intermissioncount = 0,
+                    splittingblowcount = 0,
 				},
                 "alert","enragecd",
 				"alert","smashcd",
