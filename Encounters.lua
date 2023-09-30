@@ -3433,6 +3433,7 @@ do
 			empowercd = {68.3, 56, loop = false, type = "series"},
 			rootscd = {53, 56, loop = false, type = "series"},
             dreadflamecd = {34, 40, 35, 30, 25, 20, 15, loop = false, type = "series"},
+            blazingheatcd = 21,
             
             -- Texts
             heattext = "",
@@ -3479,6 +3480,7 @@ do
 				"set",{
 					phase = 1,
                     intermissioncount = 0,
+                    splittingblowcount = 0,
 				},
                 "alert","enragecd",
 				"alert","smashcd",
@@ -3673,7 +3675,7 @@ do
             },
             {
                 phase = format("|cffffd700Intermission|r |cffffffffPhase|r"),
-                alerts = {"intermissionsoonwarn","splitcast","hammersidewarn","intermissionduration","sonkilledwarn","heatwarn","heatselfwarn"},
+                alerts = {"intermissionsoonwarn","splitcast","hammersidewarn","intermissionduration","sonkilledwarn","heatwarn","heatselfwarn","blazingheatcd","blazingheatwarn",},
             },
             {
                 phase = 2,
@@ -3681,7 +3683,7 @@ do
             },
             {
                 phase = 3,
-                alerts = {"meteorcd","meteorwarn","meteorselfwarn","fixateselfwarn"},
+                alerts = {"meteorcd","meteorwarn","meteorselfwarn","fixateselfwarn","blazingheatcd","blazingheatwarn",},
             },
             {
                 phase = 4,
@@ -4004,6 +4006,28 @@ do
             },          
             -- Sons of Flame Dead
             
+            -- Blazing Heat Timers & Warning
+            blazingheatcd = {
+                varname = format(L.alert["%s CD"],SN[100981]),
+                type = "dropdown",
+                text = format(L.alert["Next %s"],SN[100981]),
+                time = "<blazingheatcd>",
+                flashtime = 5,
+                color1 = "RED",
+                icon = ST[100981],
+            },
+        
+            blazingheatwarn = {
+                varname = format(L.alert["%s Warning"],SN[100981]),
+                type = "centerpopup",
+                text = format(L.alert["%s"],SN[100981]),
+                time = 3,
+                flashtime = 3,
+                color1 = "RED",
+                icon = ST[100981],
+                sound = "ALERT2",
+            },
+
             -- Blazing Heat
             heatwarn = {
 				varname = format(L.alert["%s Warning"],SN[100981]),
