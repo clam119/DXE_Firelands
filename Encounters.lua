@@ -4780,6 +4780,7 @@ do
 								"expect",{"&difficulty&",">=","3"},
 								"set",{
 									smashcd = {6,50.5,40, loop = false, type = "series"},
+                                    flamescd = {40, 60, 60, loop = false, type = "series"},
 								},
 								"alert","smashcd",
 								"alert","flamescd",
