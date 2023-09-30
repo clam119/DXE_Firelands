@@ -4479,6 +4479,7 @@ do
 						"batchquash",{"smashcd","trapcd","flamescd","seedcd","handcd","wrathcd"},
                         "alert","splitcast",
                         "set",{intermissioncount = "INCR|1"},
+                        "set",{splittingblowcount= "INCR|1"},
 						"set",{
                             phasetext = format(L.alert["Intermission %s"],"<intermissioncount>"),
                             intermissiontext = format(L.alert["Phase %s"],"&sum|<phase>|1&"),
