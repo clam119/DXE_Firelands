@@ -3433,6 +3433,7 @@ do
 			empowercd = {68.3, 56, loop = false, type = "series"},
 			rootscd = {53, 56, loop = false, type = "series"},
             dreadflamecd = {34, 40, 35, 30, 25, 20, 15, loop = false, type = "series"},
+            blazingheatcd = 21,
             
             -- Texts
             heattext = "",
