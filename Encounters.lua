@@ -4809,7 +4809,7 @@ do
                             },
                             {
                                 "expect",{"&difficulty&",">=","3"},
-                                "set",{flamescd = {30, 30, loop = false, type = "series"}},
+                                "set",{flamescd = {30, 30, loop = true, type = "series"}},
                             },
                         },
 						"alert","smashcd",
