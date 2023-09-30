@@ -829,7 +829,7 @@ do
             },
             {
                 phase = 1,
-                alerts = {"spinnerscd","spinnerswarn","spiderlingscd","spiderlingswarn","dronescd","droneswarn","fixatewarn","fixateselfwarn","poisonselfwarn","devastationcd","devastationsoon","devastationwarn", flarecd"},
+                alerts = {"spinnerscd","spinnerswarn","spiderlingscd","spiderlingswarn","dronescd","droneswarn","fixatewarn","fixateselfwarn","poisonselfwarn","devastationcd","devastationsoon","devastationwarn", "flarecd"},
             },
             {
                 phase = 2,
