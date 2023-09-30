@@ -3458,6 +3458,7 @@ do
             phase = 1,
 			intermissioncount = 0,
             sonscount = 8,
+            splittingblowcount = 0,
             
             -- Report
             meteor1guid = "",
