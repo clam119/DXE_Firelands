@@ -3459,6 +3459,7 @@ do
             phase = 1,
 			intermissioncount = 0,
             sonscount = 8,
+            lavascioncount = 2,
             splittingblowcount = 0,
             
             -- Report
@@ -3641,6 +3642,7 @@ do
                 minimum = 0,
                 maximum = 8,
             },
+            
         },
 		phrasecolors = {
             {"Son[s]? of Flame left","WHITE"},
@@ -4834,6 +4836,7 @@ do
                         "expect",{"&difficulty&",">=","3"},
                         "expect",{"#2#","==",SN[100312]},
                         "expect",{"#1#","find","boss"},
+                        "removecounter","scionscounter",
                         "set",{
                             intermissiontext = format(L.alert["Phase %s"],"&sum|<phase>|1&"),
                             phasetext = format(L.alert["Phase %s"],"&sum|<phase>|1&"),
@@ -4872,6 +4875,24 @@ do
                     },
                 },
             },  
+
+            -- Lava Scion Death - Should decrement by 1 on their death and once it hits 0, should quash the blazingheatcd
+            {
+                type = "combatevent",
+                eventtype = "UNIT_DIED",
+                execute = {
+                    {
+                        "expect",{"&npcid|#4#&","==","53231"}, 
+                        "set",{lavascioncount = "DECR|1"}, -- Decrement the counter of scions on death
+                        "invoke",{
+                            {
+                                "expect",{"<lavascioncount>","==","0"},
+                                "quash",{"blazingheatcd","#4#"},
+                            },
+                        },
+                    },
+                },
+            },
             -- Record meteor guid
             {
                 type = "combatevent",
