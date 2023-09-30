@@ -4006,7 +4006,7 @@ do
             -- Sons of Flame Dead
             
             -- Blazing Heat Timers & Warning
-                blazingheatcd = {
+            blazingheatcd = {
                 varname = format(L.alert["%s CD"],SN[100981]),
                 type = "dropdown",
                 text = format(L.alert["Next %s"],SN[100981]),
@@ -4014,9 +4014,9 @@ do
                 flashtime = 5,
                 color1 = "RED",
                 icon = ST[100981],
-                },
-            
-                blazingheatwarn = {
+            },
+        
+            blazingheatwarn = {
                 varname = format(L.alert["%s Warning"],SN[100981]),
                 type = "centerpopup",
                 text = format(L.alert["%s"],SN[100981]),
@@ -4025,7 +4025,7 @@ do
                 color1 = "RED",
                 icon = ST[100981],
                 sound = "ALERT2",
-                },
+            },
 
             -- Blazing Heat
             heatwarn = {
