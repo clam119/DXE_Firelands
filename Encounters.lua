@@ -829,7 +829,7 @@ do
             },
             {
                 phase = 1,
-                alerts = {"spinnerscd","spinnerswarn","spiderlingscd","spiderlingswarn","dronescd","droneswarn","fixatewarn","fixateselfwarn","poisonselfwarn","devastationcd","devastationsoon","devastationwarn", flarecd"},
+                alerts = {"spinnerscd","spinnerswarn","spiderlingscd","spiderlingswarn","dronescd","droneswarn","fixatewarn","fixateselfwarn","poisonselfwarn","devastationcd","devastationsoon","devastationwarn", "flarecd"},
             },
             {
                 phase = 2,
@@ -3458,6 +3458,7 @@ do
             phase = 1,
 			intermissioncount = 0,
             sonscount = 8,
+            splittingblowcount = 0,
             
             -- Report
             meteor1guid = "",
@@ -4478,6 +4479,7 @@ do
 						"batchquash",{"smashcd","trapcd","flamescd","seedcd","handcd","wrathcd"},
                         "alert","splitcast",
                         "set",{intermissioncount = "INCR|1"},
+                        "set",{splittingblowcount= "INCR|1"},
 						"set",{
                             phasetext = format(L.alert["Intermission %s"],"<intermissioncount>"),
                             intermissiontext = format(L.alert["Phase %s"],"&sum|<phase>|1&"),
