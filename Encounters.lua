@@ -4511,6 +4511,7 @@ do
                         "expect",{"<splittingblowcount>","==","2",}, 
                         "invoke",{
                             {
+								"set",{blazingheatcd = {21,21,21,21, loop = false, type = "series"},},
                                 "alert","blazingheatcd",
                             },
                         },
